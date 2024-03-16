@@ -2,31 +2,29 @@
     margin: 0px;
     font-family: sans-serif;
 }
-nav .nav-items-parent{
+/* nav start  */
+nav{
     display: flex;
     justify-content: space-between;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin: 0px 200px;
     align-items: center;
-    padding: 10px 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
-nav .nav-items-parent ul{
-    display: flex;
-    align-items: center;
+nav ul{
     padding: 0px;
 }
-nav .nav-items-parent ul li{
+nav ul li{
+    display: inline-block;
     list-style: none;
 }
-.nav-items-parent ul li a{
+nav ul li a{
     text-decoration: none;
-    font-size: 1.1rem;
-    display: inline-block;
+    padding: 5px 15px;
     color: black;
-    padding: 5px 20px;
 }
-.nav-items-parent ul li a i{
-    font-size: 1.5rem;
+nav h2{
+    font-size: 1.7rem;
 }
 
 /* header part start  */
@@ -135,7 +133,7 @@ header{
     display: inline-block;
     color: #DC256D;
     margin-top: 2rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     position: absolute;
     right:0px;
 }
@@ -180,10 +178,13 @@ footer{
     text-decoration: none;
     display: inline-block;
 }
+.footer-icon-container{
+    margin-top: 20px;
+}
 .footer-icon-container i{
     padding:0.7rem;
-    font-size: 1.2rem;
-    margin: 20px 8px;
+    font-size: 1.1rem;
+    margin:0px 12px;
     background-color: #DC256D;
     border-radius: 50%;
     color: white;
@@ -194,17 +195,18 @@ footer{
 }
 /* mobile responsive  */
 @media only screen and (max-width:576px){
-    nav .nav-items-parent{
+    nav{
         flex-direction: column;
-        margin-left: 10px;
-        margin-right: 10px;
-    }    
-    nav .nav-items-parent h2{
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 0px 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
-    .nav-items-parent ul li a{
-        padding: 5px 15px;
+    nav ul li a{
+        text-decoration: none;
+        padding: 5px 8px;
+        color: black;
+        display: inline-block;
+        margin-top: 25px;
     }
     header{
         margin: auto 20px;
@@ -235,14 +237,18 @@ footer{
 
 /* tab responsive */
 @media only screen and (min-width:577px) and (max-width:886px){
-    nav .nav-items-parent{
-        flex-direction: column;
-        margin-left: 35px;
-        margin-right: 35px;
+    nav{
+        display: block;
+        margin: 0px 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
-    nav .nav-items-parent h2{
-        margin-top: 30px;
-        margin-bottom: 30px;
+    nav ul{
+        margin-top: 40px;
+    }
+    nav ul li a{
+        padding: 5px 10px;
+        font-size: 1.5rem;
     }
     header{
         margin: auto 30px;
@@ -274,15 +280,15 @@ footer{
 
 }
 /* large device  */
-@media only screen and (min-width:887px) and (max-width:1150px){
-    nav .nav-items-parent{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-left: 80px;
-        margin-right: 80px;
-        padding: 30px 0px;
-        
+@media only screen and (min-width:887px) and (max-width:1150px){   
+    nav{
+        margin: 0px 60px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    nav ul li a{
+        padding: 7px 15px;
+        font-size: 1.3rem;
     }
     header{
         margin:auto 80px;
