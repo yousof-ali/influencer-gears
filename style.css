@@ -1,0 +1,110 @@
+*{
+    margin: 0px;
+    font-family: sans-serif;
+}
+nav .nav-items-parent{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 200px;
+    margin-right: 200px;
+    align-items: center;
+    padding: 10px 0px;
+}
+nav .nav-items-parent ul{
+    display: flex;
+    padding: 0px;
+}
+nav .nav-items-parent ul li{
+    list-style: none;
+}
+.nav-items-parent ul li a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: inline-block;
+    color: black;
+    padding: 5px 20px;
+}
+.nav-items-parent ul li a i{
+    font-size: 1.5rem;
+}
+
+/* header part start  */
+header{
+    margin:auto 200px;
+    padding: 70px 0px;
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-text h1{
+    font-size: 3rem;
+    margin: 20px 0px;
+}
+.header-text a{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #DC256D;
+    color: white;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+}
+.cricle-image{
+    position: relative;
+}
+.cricle-image > img{
+    width: 100%;
+}
+.main-camera{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+.main-camera img{
+    width: 100%;
+}
+
+/* mobile responsive  */
+@media only screen and (max-width:576px){
+    nav .nav-items-parent{
+        flex-direction: column;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    nav .nav-items-parent h2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .nav-items-parent ul li a{
+        padding: 5px 15px;
+    }
+    header{
+        margin: auto 20px;
+    }
+    .header-container{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
+
+/* tab responsive */
+@media only screen and (min-width:577px) and (max-width:786px){
+    nav .nav-items-parent{
+        flex-direction: column;
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+    nav .nav-items-parent h2{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    header{
+        margin: auto 30px;
+    }
+    .header-container{
+        flex-direction: column-reverse;
+    }
+
+}
