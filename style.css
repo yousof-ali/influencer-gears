@@ -12,6 +12,7 @@ nav .nav-items-parent{
 }
 nav .nav-items-parent ul{
     display: flex;
+    align-items: center;
     padding: 0px;
 }
 nav .nav-items-parent ul li{
@@ -48,8 +49,9 @@ header{
     background-color: #DC256D;
     color: white;
     margin-top: 2rem;
-    padding: 1rem;
+    padding: 0.8rem;
     border-radius: 1.5rem;
+    align-items: center;
 }
 .cricle-image{
     position: relative;
@@ -66,13 +68,107 @@ header{
     width: 100%;
 }
 
+/* logo section  */
+#main{
+    margin-left: 300px;
+    margin-right: 300px;
+}
+.logo-parent{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top: 2px solid rgba(219, 213, 213, 0.397);
+    border-bottom: 2px solid rgba(219, 213, 213, 0.397);
+    padding: 15px 0px;
+}
+.logo-parent img{
+    width: 5rem;
+    margin:10px 20px;
+}
+/* product section  */
+#product-section{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    position: relative;
+
+}
+.product-title{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+}
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    gap: 2rem;
+}
+.single-product-item{
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 7px 5px #F2F2F2;
+}
+.single-product-item .product-image img{
+    width: 100%;
+}
+.product-text h2{
+    margin: 10px 0px;
+}
+.product-text .price{
+    font-size: 1.8rem;
+    color: rgba(0, 0, 0, 0.774);
+    display: inline-block;
+    margin: 10px 0px;
+}
+.fa-star, .fa-star-half-alt{
+    color: #F78027;
+    margin-bottom: 10px;
+}
+.product-text p{
+    color: rgba(0, 0, 0, 0.568);
+    margin: 8px 0px;
+}
+.see-more{
+    text-decoration: none;
+    display: inline-block;
+    color: #DC256D;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    position: absolute;
+    right:0px;
+}
+/* feature section start  */
+.feature-parent{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding: 80px 0px;
+}
+.feature-parent h2{
+    font-size: 1.6rem;
+    margin: 1.1rem 0px;
+}
+.feature-parent p{
+    line-height: 1.2rem;
+}
+.feature-parent a{
+    display: inline-block;
+    margin-top: 1.2rem;
+    text-decoration: none;
+    background-color: #DC256D;
+    color: white;
+    padding: 10px;
+}
+
 /* mobile responsive  */
 @media only screen and (max-width:576px){
     nav .nav-items-parent{
         flex-direction: column;
         margin-left: 10px;
         margin-right: 10px;
-    }
+    }    
     nav .nav-items-parent h2{
         margin-top: 20px;
         margin-bottom: 20px;
@@ -87,10 +183,25 @@ header{
         flex-direction: column-reverse;
         text-align: center;
     }
+    #main{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .product-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .feature-parent{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 40px;
+        padding: 30px 0px;
+    }
+    
 }
 
 /* tab responsive */
-@media only screen and (min-width:577px) and (max-width:786px){
+@media only screen and (min-width:577px) and (max-width:886px){
     nav .nav-items-parent{
         flex-direction: column;
         margin-left: 35px;
@@ -106,5 +217,58 @@ header{
     .header-container{
         flex-direction: column-reverse;
     }
+    #main{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .logo-parent{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .logo-parent img{
+        margin: 10px 15px;
+    }
+    .product-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .feature-parent{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 60px;
+        padding: 40px 0px;
+    }
 
+}
+/* large device  */
+@media only screen and (min-width:887px) and (max-width:1150px){
+    nav .nav-items-parent{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 80px;
+        margin-right: 80px;
+        padding: 30px 0px;
+        
+    }
+    header{
+        margin:auto 80px;
+        padding: 50px 0px;
+    }
+    .header-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+    #main{
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    .feature-parent{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        padding: 60px 0px;
+    }
 }
